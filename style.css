@@ -1,0 +1,91 @@
+:root{
+    background-color: black;
+    color: white;
+    font-family: 'Lexend';
+    font-weight: 300;
+}
+body{
+    margin: 0;
+}
+a:visited{
+    color: white;
+}
+.menu{
+    position: fixed;
+    top: .7rem;
+    right: .7rem;
+    background: rgb(173,0,255);
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 10px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: width 1s, height 1s, border-radius 200ms;
+}
+.menu > button{
+    font-size: 2rem;
+    border: none;
+    background: none;
+    color: white;
+}
+.pageContainer{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    padding: 0;
+}
+.aboutMeContainer{
+    width: 60%;
+    height: 60%;
+    padding: 3rem;
+}
+#about{
+    font-size: 10rem;
+    font-weight: 400;
+}
+#aboutText{
+    font-size: 2rem;
+}
+.circleOneContainer{
+    height: 100%;
+    width: 30%;
+}
+.circleOne{
+    height: 110%;
+    width: 100%;
+    border-radius: 0 1% 150% 0;
+    background: rgb(173,0,255);
+    background: linear-gradient(180deg, rgba(173,0,255,1) 0%, rgba(173,0,255,1) 30%, rgba(0,255,41,1) 71%);
+}
+.circleTwoContainer{
+    height: 100%;
+    width: 25%;
+    position: relative;
+}
+.circleTwo{
+    height: 120vh;
+    width: 25vw;
+    position: absolute;
+    bottom: 1%;
+    border-radius: 250vw 0 0 200vw;
+    background: rgb(173,0,255);
+    background: linear-gradient(180deg, rgba(173,0,255,1) 0%, rgba(173,0,255,1) 30%, rgba(0,255,41,1) 71%); 
+}
+.skillsContainer{
+    width: 75%;
+    height: 90%;
+}
+
+#skills{
+    font-size: 8rem;
+    font-weight: 400;
+    padding: 0 1rem;
+}
+
+#skillsText{
+    font-size: 2rem;
+    padding: 0 2rem;
+}
