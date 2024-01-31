@@ -1,3 +1,4 @@
+/* global */
 :root {
     background-color: black;
     color: white;
@@ -30,6 +31,33 @@ a:visited {
     color: white;
 }
 
+button {
+    border: none;
+    background: none;
+}
+
+button:hover {
+    filter: invert(50%);
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    padding: 0;
+}
+
+.genericHeading {
+    font-size: 8rem;
+    font-weight: 400;
+    padding: 0 1rem;
+}
+
+.dotBackground {
+    background-image: url(background.svg);
+    background-position-x: var(--scroll);
+}
+
 /* menu*/
 .menu {
     position: fixed;
@@ -59,10 +87,8 @@ a:visited {
     padding: .5rem;
 }
 
-.menu>button {
+#menuButton {
     font-size: 2rem;
-    border: none;
-    background: none;
     color: white;
 }
 
@@ -72,18 +98,7 @@ a:visited {
     text-align: center;
 }
 
-.pageContainer {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    padding: 0;
-}
-
-.dotBackground {
-    background-image: url(background.svg);
-    background-position-x: var(--scroll);
-}
-
+/* welcome page */
 .welcomeContainer {
     width: 60%;
     height: 60%;
@@ -135,15 +150,8 @@ a:visited {
     margin-bottom: 2rem;
 }
 
-.genericHeading {
-    font-size: 8rem;
-    font-weight: 400;
-    padding: 0 1rem;
-}
-
 #aboutText {
     font-size: 1.7rem;
-
 }
 
 .links {
@@ -192,7 +200,6 @@ a:visited {
 }
 
 /* skills page */
-/* skills box */
 .skillsBoxes {
     width: 97vw;
     padding: 1.5rem;
@@ -249,15 +256,6 @@ a:visited {
     width: 1rem;
 }
 
-.btn {
-    background: none;
-    border: none;
-}
-
-.btn:hover {
-    filter: invert(50%);
-}
-
 /* skills dialog */
 
 #dialog {
@@ -295,28 +293,10 @@ a:visited {
     mask-image: url(icons/circle.svg);
 }
 
-#dialogClose {
-    background: none;
-    border: none;
-}
-
 #closeIcon {
     mask-image: url(icons/xmark.svg);
     height: 2rem;
     width: 2rem;
-}
-
-.circleTwoContainer {
-    height: 100%;
-    width: 30%;
-}
-
-.circleTwo {
-    height: 100%;
-    width: 100%;
-    border-radius: 0 100% 0;
-    background: rgb(173, 0, 255);
-    background: linear-gradient(180deg, rgba(173, 0, 255, 1) 0%, rgba(173, 0, 255, 1) 30%, rgba(0, 255, 41, 1) 71%);
 }
 
 /* project */
@@ -353,21 +333,6 @@ a:visited {
     mask-image: url(icons/github.svg);
     height: 2rem;
     width: 2rem;
-}
-
-.circleThreeContainer {
-    height: 100%;
-    width: 40%;
-    position: relative;
-}
-
-.circleThree {
-    height: 120vh;
-    width: 25vw;
-    position: absolute;
-    bottom: 1%;
-    border-radius: 250vw 0 0 200vw;
-    background: linear-gradient(180deg, rgba(173, 0, 255, 1) 0%, rgba(173, 0, 255, 1) 30%, rgba(0, 255, 41, 1) 71%);
 }
 
 @media only screen and (max-width: 600px) {
