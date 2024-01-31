@@ -25,6 +25,7 @@ body {
     overflow-x: hidden;
 }
 
+a,
 a:visited {
     color: white;
 }
@@ -98,6 +99,18 @@ a:visited {
     font-size: 2rem;
 }
 
+#name,
+#school>a {
+    color: rgb(173, 0, 255);
+    font-weight: 400;
+    font-size: larger;
+    text-decoration: none;
+}
+
+#school>a:hover {
+    text-decoration: underline;
+}
+
 .shapeOneContainer {
     height: 100%;
     width: 30%;
@@ -115,17 +128,21 @@ a:visited {
     width: 75%;
     height: 90%;
     padding: 0 2rem;
+    margin-top: 4rem;
+}
+
+#about {
+    margin-bottom: 2rem;
 }
 
 .genericHeading {
     font-size: 8rem;
     font-weight: 400;
     padding: 0 1rem;
-    background-color: rgba(0, 0, 0, .25);
 }
 
 #aboutText {
-    font-size: 2rem;
+    font-size: 1.7rem;
 
 }
 
@@ -166,6 +183,7 @@ a:visited {
     background-color: rgb(173, 0, 255);
     padding: 1rem;
     margin-right: 1.5rem;
+    margin-top: 25vh;
     border-radius: 15px;
 }
 
@@ -176,7 +194,8 @@ a:visited {
 /* skills page */
 /* skills box */
 .skillsBoxes {
-    width: 100vw;
+    width: 97vw;
+    padding: 1.5rem;
     display: flex;
     flex-direction: row;
     gap: 5rem;
@@ -190,6 +209,8 @@ a:visited {
     padding: .5rem;
     background-color: black;
     padding: 1.5rem;
+    width: 20vw;
+    height: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -324,7 +345,7 @@ a:visited {
 }
 
 .projectBoxText {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -358,7 +379,7 @@ a:visited {
         border-radius: 50%;
     }
 
-    .menuListElement{
+    .menuListElement {
         margin: 1rem 0;
     }
 
@@ -385,6 +406,7 @@ a:visited {
     .pageContainer {
         flex-direction: column;
         height: auto;
+        width: 98vw;
         padding: 0;
     }
 
@@ -417,7 +439,8 @@ a:visited {
     }
 
     #aboutText {
-        font-size: 1.5rem;
+        font-size: 1.25em;
+        background-color: rgba(0, 0, 0, .2);
     }
 
     .links {
@@ -440,10 +463,13 @@ a:visited {
     .portraitBorder {
         width: fit-content;
         padding: 1rem;
+        margin-top: 0;
         margin-right: 0;
     }
 
     .skillsBoxes {
+        width: 100%;
+        padding: 0;
         flex-direction: column;
         gap: 1.5rem;
         align-items: center;
@@ -453,7 +479,8 @@ a:visited {
         width: 50vw;
     }
 
-    #dialog, .projectBox {
+    #dialog,
+    .projectBox {
         width: 80vw;
     }
 
