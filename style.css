@@ -32,18 +32,30 @@ a:visited {
 /* menu*/
 .menu {
     position: fixed;
-    top: .7rem;
-    right: .7rem;
     background: rgb(173, 0, 255);
-    height: 4rem;
-    width: 4rem;
-    border-radius: 50%;
     border: 10px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
     transition: width 1s, height 1s, border-radius 200ms;
+}
+
+.menuNormal {
+    top: .7rem;
+    right: .7rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+}
+
+.menuExpanded {
+    top: .5rem;
+    right: .5rem;
+    width: 8rem;
+    height: 6rem;
+    border-radius: 15px;
+    padding: .5rem;
 }
 
 .menu>button {
@@ -55,6 +67,8 @@ a:visited {
 
 #menuList {
     list-style-type: none;
+    padding: 0;
+    text-align: center;
 }
 
 .pageContainer {
@@ -84,12 +98,12 @@ a:visited {
     font-size: 2rem;
 }
 
-.circleOneContainer {
+.shapeOneContainer {
     height: 100%;
     width: 30%;
 }
 
-.circleOne {
+.shapeOne {
     height: 110%;
     width: 100%;
     border-radius: 0 1% 150% 0;
@@ -333,4 +347,119 @@ a:visited {
     bottom: 1%;
     border-radius: 250vw 0 0 200vw;
     background: linear-gradient(180deg, rgba(173, 0, 255, 1) 0%, rgba(173, 0, 255, 1) 30%, rgba(0, 255, 41, 1) 71%);
+}
+
+@media only screen and (max-width: 600px) {
+    .menuNormal {
+        top: auto;
+        bottom: .7rem;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+    }
+
+    .menuListElement{
+        margin: 1rem 0;
+    }
+
+    .menuExpanded {
+        top: auto;
+        bottom: .5rem;
+        width: 6.5rem;
+        height: 7.5rem;
+        border-radius: 15px;
+    }
+
+    .shapeOneContainer {
+        height: 5rem;
+        width: 100vw;
+    }
+
+    .shapeOne {
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        background: linear-gradient(to left, rgba(173, 0, 255, 1) 0%, rgba(173, 0, 255, 1) 20%, rgba(0, 255, 41, 1) 60%);
+    }
+
+    .pageContainer {
+        flex-direction: column;
+        height: auto;
+        padding: 0;
+    }
+
+    .welcomeContainer {
+        width: 95%;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    #welcome {
+        font-size: 5rem;
+        font-weight: 400;
+    }
+
+    #welcomeText {
+        font-size: 1.5rem;
+    }
+
+    .aboutMeContainer,
+    .skillsContainer,
+    .projectsContainer {
+        width: 95%;
+        height: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .genericHeading {
+        font-size: 4rem;
+    }
+
+    #aboutText {
+        font-size: 1.5rem;
+    }
+
+    .links {
+        justify-content: center;
+        height: 2.5rem;
+        width: 100%;
+    }
+
+    .link {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .portraitContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .portraitBorder {
+        width: fit-content;
+        padding: 1rem;
+        margin-right: 0;
+    }
+
+    .skillsBoxes {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .skillsBox {
+        width: 50vw;
+    }
+
+    #dialog, .projectBox {
+        width: 80vw;
+    }
+
+    #projectBoxes {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
 }

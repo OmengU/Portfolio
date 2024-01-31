@@ -12,33 +12,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const menuButton = document.querySelector("#menuButton")
 
     const menuExpand = () => {
-        menuButton.style.display = "none";
-        menu.style.top = ".5rem";
-        menu.style.right = ".5rem";
-        menu.style.width = "10rem";
-        menu.style.height = "6rem";
-        menu.style.borderRadius = "15px"
+
+        if(menu.classList.contains("menuNormal")) menu.classList.remove("menuNormal");
+        menu.classList.add("menuExpanded");
 
         if (menu.querySelector('ul')) {
             return;
         }    
         
         menu.innerHTML = `<ul id="menuList">
-        ${Links.map(link => `<li><a href="#${link.toLocaleLowerCase()}">${link}</a></li>`).join('')}
+        ${Links.map(link => `<li class="menuListElement"><a href="#${link.toLocaleLowerCase()}">${link}</a></li>`).join('')}
         </ul>`;
         
     }
 
     const revertMenuExpand = () => {
+        if(menu.classList.contains("menuExpanded")) menu.classList.remove("menuExpanded")
+        menu.classList.add("menuNormal");
         menu.innerHTML = "";
         menu.appendChild(menuButton);
         menuButton.style.display = "inline";
-        menu.style.top = ".7rem";
-        menu.style.right = ".7rem";
-        menu.style.width = "4rem";
-        menu.style.height = "4rem";
-        menu.style.borderRadius = "50%"
-
     }
 
     const disableMousOutAfterNavigation = () => {
