@@ -213,7 +213,6 @@ button:hover {
 .skillsBox {
     border: .5rem solid rgb(173, 0, 255);
     border-radius: 15px;
-    padding: .5rem;
     background-color: black;
     padding: 1.5rem;
     width: 20vw;
@@ -442,6 +441,11 @@ button:hover {
 
     .skillsBox {
         width: 50vw;
+        padding: 1rem;
+    }
+
+    .skillsBoxText {
+        margin-top: .5rem;
     }
 
     #dialog,
