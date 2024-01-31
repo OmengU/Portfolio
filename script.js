@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+
+    const scrollShift = () =>  {
+        document.body.style.setProperty('--scroll', ((window.scrollY / (document.body.offsetHeight - window.innerHeight)*100).toString() + "%"))
+    }
+
+    window.addEventListener("scroll", scrollShift);
+    
     /** @type {HTMLElement} */
     const menu = document.querySelector(".menu");
     /** @type {HTMLElement} */
@@ -9,33 +16,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         menu.style.top = ".5rem";
         menu.style.right = ".5rem";
         menu.style.width = "10rem";
+        menu.style.height = "6rem";
         menu.style.borderRadius = "15px"
 
         if (menu.querySelector('ul')) {
             return;
         }    
         
-        let linkList = document.createElement("ul");
-        let linkElement = document.createElement("li");
-        let link = document.createElement("a");
-        let linkText = document.createTextNode("");
-        Links.forEach(item => {
-            linkText = document.createTextNode(item);
-            link.appendChild(linkText);
-            link.href = `#${item.toLowerCase()}`;
-
-            link.style.color = "white";
-
-            linkElement.appendChild(link);
-            linkList.appendChild(linkElement);
-
-            link.addEventListener("click", disableMousOutAfterNavigation);
-
-            linkElement = document.createElement("li");
-            link = document.createElement("a");
-            linkText = document.createTextNode("")
-        });
-        menu.appendChild(linkList);
+        menu.innerHTML = `<ul id="menuList">
+        ${Links.map(link => `<li><a href="#${link.toLocaleLowerCase()}">${link}</a></li>`).join('')}
+        </ul>`;
+        
     }
 
     const revertMenuExpand = () => {
@@ -45,6 +36,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         menu.style.top = ".7rem";
         menu.style.right = ".7rem";
         menu.style.width = "4rem";
+        menu.style.height = "4rem";
         menu.style.borderRadius = "50%"
 
     }
@@ -70,4 +62,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
-const Links = ["About", "Skills"];
+const Links = ["Welcome", "About", "Skills", "Projects"];

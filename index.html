@@ -22,24 +22,94 @@
         <div class="circleOneContainer">
             <div class="circleOne"></div>
         </div>
+        <div class="welcomeContainer">
+            <h1 id="welcome">Welcome</h1>
+            <p id="welcomeText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus optio repudiandae
+                maxime aspernatur! Veritatis reiciendis iusto ratione eaque repellat voluptatem eveniet fuga nisi?</p>
+        </div>
+    </div>
+    <div class="pageTwoContainer pageContainer dotBackground">
         <div class="aboutMeContainer">
-            <h1 id="about">About Me</h1>
+            <h1 class="genericHeading" id="about">About Me</h1>
             <p id="aboutText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus optio repudiandae
                 maxime aspernatur! Veritatis reiciendis iusto ratione eaque repellat voluptatem eveniet fuga nisi?</p>
+            <div class="links">
+                <a href="https://github.com/OmengU" class="link">
+                    <span id="github" class="icon"></span>
+                </a>
+                <a href="mailto:florian.piberger@mailbox.org" class="link">
+                    <span id="mail" class="icon"></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="portraitContainer">
+            <div class="portraitBorder">
+                <img src="portrait/florian-small.jpg" alt="My Photo" id="photo">
+            </div>
         </div>
     </div>
-    <div class="pageTwoContainer pageContainer">
+    <dialog id="dialog"></dialog>
+    <div class="pageThreeContainer pageContainer dotBackground">
         <div class="skillsContainer">
-            <h1 id="skills">Skills</h1>
-            <p id="skillsText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus optio repudiandae
-                maxime aspernatur! Veritatis reiciendis iusto ratione eaque repellat voluptatem eveniet fuga nisi?</p>
+            <h1 class="genericHeading" id="skills">Skills</h1>
+            <div class="skillsBoxes">
+                <div class="skillsBox">
+                    <span id="pLangsIcon" class="icon skillsIcon"></span>
+                    <h2 class="skillsBoxText">Programming<br>Languages</h2>
+                    <button class="btn" onclick="showDialog('pLangs')">
+                        <span class="moreInfoIcon icon"></span>
+                    </button>
+                </div>
+                <div class="skillsBox">
+                    <span id="webDevIcon" class="icon skillsIcon"></span>
+                    <h2 class="skillBoxText">Web Development</h2>
+                    <button class="btn" onclick="showDialog('webDev')">
+                        <span class="moreInfoIcon icon"></span>
+                    </button>
+                </div>
+                <div class="skillsBox">
+                    <span id="langsIcon" class="icon skillsIcon"></span>
+                    <h2 class="sillBoxText">Languages</h2>
+                    <button class="btn" onclick="showDialog('langs')">
+                        <span class="moreInfoIcon icon"></span>
+                    </button>
+                </div>
+                <div class="skillsBox">
+                    <span id="otherSkillsIcon" class="icon skillsIcon"></span>
+                    <h2 class="skillBoxText">Other Skills</h2>
+                    <button class="btn" onclick="showDialog('other')">
+                        <span class="moreInfoIcon icon"></span>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="circleTwoContainer">
-            <div class="circleTwo"></div>
+    </div>
+    <div class="pageFourContainer pageContainer dotBackground">
+        <div class="projectsContainer">
+            <h1 class="genericHeading" id="projects">Projects</h1>
+            <div id="projectBoxes">
+                <div class="projectBox">
+                    <h2 class="projectBoxHeading">Todo Application</h2>
+                    <p class="projectBoxText">A simple Todo Application implemented with Lit (Frontend) and Asp.net Core
+                        (Backend)</p>
+                    <a href="https://github.com/OmengU/ToDoApplication" id="todoLink">
+                        <span class="githubProjectIcon icon"></span>
+                    </a>
+                </div>
+                <div class="projectBox">
+                    <h2 class="projectBoxHeading">quap</h2>
+                    <p class="projectBoxText">My Diploma Thesis Project. A quiz application similar to Kahoot, but
+                        hosted locally on an instructors PC. Implemented with Asp.net Core and React.</p>
+                    <a href="https://github.com/OmengU/quap" class="quapLink">
+                        <span class="githubProjectIcon icon"></span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
-
+    <script src="dialog.js"></script>
 </body>
 
 </html>

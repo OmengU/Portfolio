@@ -1,20 +1,24 @@
-:root{
+:root {
     background-color: black;
     color: white;
     font-family: 'Lexend';
     font-weight: 300;
 }
-body{
+
+body {
     margin: 0;
 }
-a:visited{
+
+a:visited {
     color: white;
 }
-.menu{
+
+/* menu*/
+.menu {
     position: fixed;
     top: .7rem;
     right: .7rem;
-    background: rgb(173,0,255);
+    background: rgb(173, 0, 255);
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
@@ -25,67 +29,292 @@ a:visited{
     z-index: 1;
     transition: width 1s, height 1s, border-radius 200ms;
 }
-.menu > button{
+
+.menu>button {
     font-size: 2rem;
     border: none;
     background: none;
     color: white;
 }
-.pageContainer{
+
+#menuList {
+    list-style-type: none;
+}
+
+.pageContainer {
     display: flex;
     flex-direction: row;
     height: 100vh;
     padding: 0;
 }
-.aboutMeContainer{
+
+.dotBackground {
+    background-image: url(background.svg);
+    background-position-x: var(--scroll);
+}
+
+.welcomeContainer {
     width: 60%;
     height: 60%;
     padding: 3rem;
 }
-#about{
+
+#welcome {
     font-size: 10rem;
     font-weight: 400;
 }
-#aboutText{
+
+#welcomeText {
     font-size: 2rem;
 }
-.circleOneContainer{
+
+.circleOneContainer {
     height: 100%;
     width: 30%;
 }
-.circleOne{
+
+.circleOne {
     height: 110%;
     width: 100%;
     border-radius: 0 1% 150% 0;
-    background: rgb(173,0,255);
-    background: linear-gradient(180deg, rgba(173,0,255,1) 0%, rgba(173,0,255,1) 30%, rgba(0,255,41,1) 71%);
+    background: rgb(173, 0, 255);
+    background: linear-gradient(180deg, rgba(173, 0, 255, 1) 0%, rgba(173, 0, 255, 1) 20%, rgba(0, 255, 41, 1) 60%);
 }
-.circleTwoContainer{
+
+.aboutMeContainer {
+    width: 75%;
+    height: 90%;
+    padding: 0 2rem;
+}
+
+.genericHeading {
+    font-size: 8rem;
+    font-weight: 400;
+    padding: 0 1rem;
+    background-color: rgba(0, 0, 0, .25);
+}
+
+#aboutText {
+    font-size: 2rem;
+
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    height: 3rem;
+    gap: 1rem;
+}
+
+.link {
+    height: 3rem;
+    width: 3rem;
+}
+
+.icon {
+    background-color: white;
+    display: inline-block;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+
+#github {
+    mask-image: url(icons/github.svg);
     height: 100%;
-    width: 25%;
+    width: 100%;
+}
+
+#mail {
+    mask-image: url(icons/mail.svg);
+    height: 100%;
+    width: 100%;
+}
+
+.portraitBorder {
+    background-color: rgb(173, 0, 255);
+    padding: 1rem;
+    margin-right: 1.5rem;
+    border-radius: 15px;
+}
+
+#photo {
+    border-radius: 15px;
+}
+
+/* skills page */
+/* skills box */
+.skillsBoxes {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skillsBox {
+    border: .5rem solid rgb(173, 0, 255);
+    border-radius: 15px;
+    padding: .5rem;
+    background-color: black;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.skillsBoxText {
+    font-size: 2rem;
+}
+
+.skillsIcon {
+    height: 3rem;
+    width: 3rem;
+}
+
+#pLangsIcon {
+    mask-image: url(icons/chip.svg);
+}
+
+#webDevIcon {
+    mask-image: url(icons/code.svg);
+}
+
+#langsIcon {
+    mask-image: url(icons/globe.svg);
+}
+
+#otherSkillsIcon {
+    mask-image: url(icons/star.svg);
+}
+
+.moreInfoIcon {
+    mask-image: url(icons/info.svg);
+    height: 1rem;
+    width: 1rem;
+}
+
+.btn {
+    background: none;
+    border: none;
+}
+
+.btn:hover {
+    filter: invert(50%);
+}
+
+/* skills dialog */
+
+#dialog {
+    background-color: black;
+    border: .5rem solid rgb(173, 0, 255);
+    border-radius: 15px;
+    color: white;
+    font-size: 1rem;
+    width: 25vw;
+}
+
+#dialogContent {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+#skillsDialogContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.circleIcon {
+    height: 1rem;
+    width: 1rem;
+}
+
+.circleFilledIcon {
+    mask-image: url(icons/circle-filled.svg);
+}
+
+.circleOutlineIcon {
+    mask-image: url(icons/circle.svg);
+}
+
+#dialogClose {
+    background: none;
+    border: none;
+}
+
+#closeIcon {
+    mask-image: url(icons/xmark.svg);
+    height: 2rem;
+    width: 2rem;
+}
+
+.circleTwoContainer {
+    height: 100%;
+    width: 30%;
+}
+
+.circleTwo {
+    height: 100%;
+    width: 100%;
+    border-radius: 0 100% 0;
+    background: rgb(173, 0, 255);
+    background: linear-gradient(180deg, rgba(173, 0, 255, 1) 0%, rgba(173, 0, 255, 1) 30%, rgba(0, 255, 41, 1) 71%);
+}
+
+/* project */
+#projectBoxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 1.5rem;
+    gap: 2rem;
+}
+
+.projectBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    border: .5rem solid rgb(173, 0, 255);
+    padding: .5rem;
+    border-radius: 15px;
+    background-color: black;
+}
+
+.projectBoxHeading {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.projectBoxText {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.githubProjectIcon {
+    mask-image: url(icons/github.svg);
+    height: 2rem;
+    width: 2rem;
+}
+
+.circleThreeContainer {
+    height: 100%;
+    width: 40%;
     position: relative;
 }
-.circleTwo{
+
+.circleThree {
     height: 120vh;
     width: 25vw;
     position: absolute;
     bottom: 1%;
     border-radius: 250vw 0 0 200vw;
-    background: rgb(173,0,255);
-    background: linear-gradient(180deg, rgba(173,0,255,1) 0%, rgba(173,0,255,1) 30%, rgba(0,255,41,1) 71%); 
-}
-.skillsContainer{
-    width: 75%;
-    height: 90%;
-}
-
-#skills{
-    font-size: 8rem;
-    font-weight: 400;
-    padding: 0 1rem;
-}
-
-#skillsText{
-    font-size: 2rem;
-    padding: 0 2rem;
+    background: linear-gradient(180deg, rgba(173, 0, 255, 1) 0%, rgba(173, 0, 255, 1) 30%, rgba(0, 255, 41, 1) 71%);
 }
