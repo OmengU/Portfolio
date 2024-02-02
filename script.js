@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const menuButton = document.querySelector("#menuButton")
 
     const menuExpand = () => {
-
         if (menu.classList.contains("menuNormal")) menu.classList.remove("menuNormal");
         menu.classList.add("menuExpanded");
 
@@ -54,6 +53,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     link.style.color = "black";
                 });
             });
+
             window.addEventListener('scroll', function() {
                 links.forEach(link => {
     
@@ -68,11 +68,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     }
                 });
             });
-
         }, 160);
-
-        
-        
     }
 
     const revertMenuExpand = () => {

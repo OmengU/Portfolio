@@ -104,7 +104,7 @@ button {
     text-align: center;
 }
 
-.menuListElement{
+.menuListElement {
     background-color: black;
     padding: .5rem;
     border-radius: 15px;
@@ -362,11 +362,11 @@ button {
         bottom: 1rem;
     }
 
-    .menu{
+    .menu {
         transition: width 300ms, border-radius 100ms;
     }
 
-    #menuList{
+    #menuList {
         display: flex;
         flex-direction: row;
         gap: .5rem;
@@ -436,7 +436,7 @@ button {
         padding: .5rem;
     }
 
-    #about{
+    #about {
         margin-top: 1rem;
     }
 
