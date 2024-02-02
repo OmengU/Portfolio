@@ -37,10 +37,6 @@ button {
     background: none;
 }
 
-button:hover {
-    filter: invert(50%);
-}
-
 .pageContainer,
 .welcomePageContainer {
     display: flex;
@@ -77,7 +73,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     z-index: 1;
-    transition: width 1s, height 1s, border-radius 200ms;
+    transition: width 500ms, height 500ms, border-radius 200ms;
 }
 
 .menuNormal {
@@ -92,7 +88,7 @@ button:hover {
     top: .5rem;
     right: .5rem;
     width: 8rem;
-    height: 6rem;
+    height: 12rem;
     border-radius: 15px;
     padding: .5rem;
 }
@@ -106,6 +102,17 @@ button:hover {
     list-style-type: none;
     padding: 0;
     text-align: center;
+}
+
+.menuListElement{
+    background-color: black;
+    padding: .5rem;
+    border-radius: 15px;
+    margin: .5rem 0;
+}
+
+.menuListElement a {
+    text-decoration: none;
 }
 
 /* welcome page */
@@ -214,7 +221,7 @@ button:hover {
 
 /* skills page */
 .skillsBoxes {
-    width: 97vw;
+    width: auto;
     padding: 1.5rem;
     display: flex;
     flex-direction: row;
@@ -351,23 +358,26 @@ button:hover {
 
 @media only screen and (max-width: 600px) {
     .menuNormal {
-        top: auto;
-        bottom: .7rem;
-        height: 4rem;
-        width: 4rem;
-        border-radius: 50%;
+        top: unset;
+        bottom: 1rem;
     }
 
-    .menuListElement {
-        margin: 1rem 0;
+    .menu{
+        transition: width 300ms, border-radius 100ms;
+    }
+
+    #menuList{
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+        flex-wrap: wrap;
     }
 
     .menuExpanded {
-        top: auto;
-        bottom: .5rem;
-        width: 6.5rem;
-        height: 7.5rem;
-        border-radius: 15px;
+        top: unset;
+        bottom: 0;
+        width: calc(100dvw - 2rem - 20px);
+        height: 4rem;
     }
 
     .shapeOneContainer {
@@ -480,5 +490,11 @@ button:hover {
         flex-direction: column;
         align-items: center;
         margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    button:hover {
+        filter: invert(50%);
     }
 }
