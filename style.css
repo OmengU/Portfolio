@@ -4,6 +4,7 @@
     color: white;
     font-family: 'Lexend';
     font-weight: 300;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -40,11 +41,20 @@ button:hover {
     filter: invert(50%);
 }
 
-.pageContainer {
+.pageContainer,
+.welcomePageContainer {
     display: flex;
     flex-direction: row;
-    height: 100vh;
     padding: 0;
+}
+
+.pageContainer {
+    min-height: 100dvh;
+    height: auto;
+}
+
+.welcomePageContainer {
+    height: 100vh;
 }
 
 .genericHeading {
@@ -108,6 +118,7 @@ button:hover {
 #welcome {
     font-size: 10rem;
     font-weight: 400;
+    margin: 2rem 0;
 }
 
 #welcomeText {
@@ -152,6 +163,8 @@ button:hover {
 
 #aboutText {
     font-size: 1.7rem;
+    backdrop-filter: blur(10px);
+    padding: .5rem;
 }
 
 .links {
@@ -216,7 +229,7 @@ button:hover {
     background-color: black;
     padding: 1.5rem;
     width: 20vw;
-    height: 20vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -305,6 +318,7 @@ button:hover {
     justify-content: flex-start;
     margin-left: 1.5rem;
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .projectBox {
@@ -321,6 +335,7 @@ button:hover {
 .projectBoxHeading {
     font-size: 3rem;
     font-weight: 400;
+    margin-bottom: 1.5rem;
 }
 
 .projectBoxText {
@@ -367,7 +382,8 @@ button:hover {
         background: linear-gradient(to left, rgba(173, 0, 255, 1) 0%, rgba(173, 0, 255, 1) 20%, rgba(0, 255, 41, 1) 60%);
     }
 
-    .pageContainer {
+    .pageContainer,
+    .welcomePageContainer {
         flex-direction: column;
         height: auto;
         width: 98vw;
@@ -396,6 +412,7 @@ button:hover {
         height: 100%;
         padding: 1rem;
         text-align: center;
+        margin-top: 1.5rem;
     }
 
     .genericHeading {
@@ -404,7 +421,13 @@ button:hover {
 
     #aboutText {
         font-size: 1.25em;
-        background-color: rgba(0, 0, 0, .2);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: .5rem;
+    }
+
+    #about{
+        margin-top: 1rem;
     }
 
     .links {
