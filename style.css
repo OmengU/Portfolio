@@ -5,6 +5,7 @@
     font-family: 'Lexend';
     font-weight: 300;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -359,7 +360,7 @@ button {
 @media only screen and (max-width: 600px) {
     .menuNormal {
         top: unset;
-        bottom: 1rem;
+        bottom: 3svh;
     }
 
     .menu {
